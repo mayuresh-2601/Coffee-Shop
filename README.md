@@ -1,61 +1,70 @@
-# ☕ Bean Haven Coffee – Full Stack Coffee Shop Web Application
+# ☕ Coffee Shop Full Stack Web Application
 
-![Bean Haven Coffee Banner](image/Banner.png) 
+A complete **Full Stack Coffee Shop Web Application** built using **HTML, CSS, JavaScript, Node.js, Express.js, and MySQL**.
+
+This project simulates a real-world café system with product management, order processing, contact handling, and admin authentication. It demonstrates full-stack development skills including frontend UI design, backend API development, and database integration.
+
+---
+
+## 🚀 Live Demo
+
+**Frontend (GitHub Pages):**
+https://mayuresh-2601.github.io/Coffee-Shop/
+
+**GitHub Repository:**
+https://github.com/mayuresh-2601/Coffee-Shop
 
 ---
 
 ## 📌 Project Overview
 
-**Bean Haven Coffee** is a full-stack coffee shop web application built using **HTML, CSS, JavaScript, Node.js, and Express.js**.
+This application represents a modern coffee shop website where users can:
 
-The project simulates a modern café website with multiple pages, dynamic UI interactions, and a backend server structure designed for scalability and real-world application development.
+* Browse coffee products
+* Place orders
+* Submit contact messages
+* Access admin login
+* Manage products via backend API
+* Store data in MySQL database
 
-This project was created to practice **full-stack web development**, including frontend UI design, backend server setup, project structuring, and deployment using GitHub Pages.
-
-It is designed as a **portfolio-ready project** to demonstrate practical skills for:
+The project is designed as a **portfolio-ready full-stack system** suitable for:
 
 * Internship roles
 * Junior Developer roles
 * Entry-Level Full Stack Developer positions
 
 ---
+---
 
-## 🚀 Live Demo
+## 📸 Screenshots
 
-Frontend (GitHub Pages):
-https://mayuresh-2601.github.io/bean-haven-coffee/
+### 🏠 Home Page
 
-GitHub Repository:
-https://github.com/mayuresh-2601/bean-haven-coffee
+![Home Page](image/home.png)
 
 ---
 
-## 🎯 Key Features
+### ☕ Products Page
 
-### Frontend Features
+![Products Page](image/products.png)
 
-✔ Responsive Navigation Bar
-✔ Multi-Page Website Structure
-✔ Coffee Product Menu Section
-✔ Add-to-Cart Functionality
-✔ Dynamic Cart Total Calculation
-✔ Admin Login Page UI
-✔ Blog Page Layout
-✔ Career Page Layout
-✔ Contact Form UI
-✔ Testimonials Section
-✔ Smooth Scrolling Effects
-✔ Hover Animations & Transitions
-✔ Fully Responsive Design
+---
 
-### Backend Features
+### 🛒 Order Page
 
-✔ Express.js Server Setup
-✔ API Routing Structure
-✔ Environment Configuration Support
-✔ Static File Serving
-✔ Database Integration Ready
-✔ Modular Project Architecture
+![Order Page](image/order.png)
+
+---
+
+### 🔐 Admin Login
+
+![Admin Login](image/login.png)
+
+---
+
+### 📊 Admin Dashboard
+
+![Admin Dashboard](image/admindash.png)
 
 ---
 
@@ -65,72 +74,109 @@ https://github.com/mayuresh-2601/bean-haven-coffee
 
 * HTML5
 * CSS3
-* JavaScript (Vanilla JS)
-* Flexbox & Grid
+* JavaScript
 * Responsive Design
-* Google Fonts
+* Flexbox & Grid
 * Font Awesome
 
 ### Backend
 
 * Node.js
 * Express.js
-* Nodemon
+* REST API
+* Middleware
+* JWT Authentication
 
 ### Database
 
-* SQL / Database Structure (Prepared for integration)
+* MySQL
+* SQL Queries
+* Database Integration
 
 ### Tools
 
 * Git
 * GitHub
 * VS Code
-* GitHub Pages
+* Nodemon
+* Postman
+
+---
+
+## 🎯 Key Features
+
+### User Features
+
+* Browse coffee menu
+* Place orders
+* Contact form submission
+* Responsive website design
+* Interactive UI animations
+
+### Admin Features
+
+* Admin login authentication
+* Add new products
+* Secure API endpoints
+* Database storage
+* Protected routes using middleware
+
+### System Features
+
+* REST API architecture
+* Modular backend structure
+* Environment configuration
+* Error handling
+* Secure database queries
 
 ---
 
 ## 📂 Project Structure
 
 ```
-bean-haven-coffee/
+Coffee-Shop/
 
 backend/
 │
+├── config/
+│   └── db.js
+│
+├── controllers/
+│   ├── authController.js
+│   ├── productController.js
+│   ├── orderController.js
+│   └── contactController.js
+│
+├── middleware/
+│   └── authMiddleware.js
+│
+├── routes/
+│   ├── authRoutes.js
+│   ├── productRoutes.js
+│   ├── orderRoutes.js
+│   └── contactRoutes.js
+│
 ├── server.js
-│
+├── package.json
+└── .env
+
 css/
-│
-├── style.css
-│
-database/
-│
-├── database.sql
-│
-image/
-│
-├── coffee images
-├── logo
-├── banner
-│
 js/
-│
-├── script.js
-│
-.env.example
-.gitignore
-README.md
+image/
+database/
+    bean_haven.sql
 
-HTML Pages
-
-index.html
-about.html
-admin.html
-admin-login.html
-blog.html
-career.html
-contact.html
-order.html
+HTML Pages:
+    index.html
+    about.html
+    products.html
+    order.html
+    payment.html
+    blog.html
+    career.html
+    contact.html
+    admin.html
+    admin-login.html
 ```
 
 ---
@@ -140,31 +186,61 @@ order.html
 ### Step 1 — Clone Repository
 
 ```
-git clone https://github.com/mayuresh-2601/bean-haven-coffee.git
+git clone https://github.com/mayuresh-2601/Coffee-Shop.git
 ```
 
 ### Step 2 — Navigate to Project
 
 ```
-cd bean-haven-coffee
+cd Coffee-Shop
 ```
 
-### Step 3 — Install Dependencies
+### Step 3 — Install Backend Dependencies
 
 ```
+cd backend
 npm install
 ```
 
-### Step 4 — Run Development Server
+### Step 4 — Create Environment File
+
+Create `.env` file inside backend:
+
+```
+PORT=5000
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=bean_haven
+
+JWT_SECRET=coffee_secret_key
+```
+
+### Step 5 — Import Database
+
+Open:
+
+```
+http://localhost/phpmyadmin
+```
+
+Create database:
+
+```
+bean_haven
+```
+
+Import:
+
+```
+database/bean_haven.sql
+```
+
+### Step 6 — Run Server
 
 ```
 npm run dev
-```
-
-### Step 5 — Run Production Server
-
-```
-npm start
 ```
 
 Server will run on:
@@ -175,125 +251,100 @@ http://localhost:5000
 
 ---
 
-## 🔌 API Routes (Planned / Basic Structure)
+## 🔌 API Endpoints
 
-| Method | Route         | Description    |
-| ------ | ------------- | -------------- |
-| GET    | /             | Home Page      |
-| GET    | /api/products | Fetch Products |
-| POST   | /api/order    | Create Order   |
-| GET    | /api/orders   | Get Orders     |
-| POST   | /api/login    | Admin Login    |
-
----
-
-## 🧠 Core Functionalities
-
-### Add to Cart System
-
-* Add products to cart
-* Update cart count dynamically
-* Calculate total price automatically
-* Remove items from cart
-
----
-
-### Multi-Page Website
-
-The website includes:
-
-* Home Page
-* About Page
-* Blog Page
-* Career Page
-* Contact Page
-* Order Page
-* Admin Panel
-* Admin Login
-
----
-
-### Responsive Design
-
-* Mobile-friendly layout
-* Tablet and desktop support
-* Flexible grid layout
-* Media queries
-
----
-
-### Backend Server
-
-* Express.js server configuration
-* Route handling
-* Static file serving
-* Environment configuration
-
----
-
-## 📊 Code Quality Practices
-
-* Clean folder structure
-* Modular file organization
-* Separation of frontend and backend logic
-* Consistent naming conventions
-* Version control using Git
-* Reusable components
-* Maintainable code structure
-
----
-
-## 🔐 Environment Configuration
-
-Create a `.env` file using:
+### Authentication
 
 ```
-.env.example
+POST /api/auth/login
 ```
 
-Example:
+### Products
 
 ```
-PORT=5000
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=yourpassword
-DB_NAME=coffee_db
+POST /api/products/add
+```
+
+### Orders
+
+```
+POST /api/orders/add
+```
+
+### Contacts
+
+```
+POST /api/contacts/add
 ```
 
 ---
 
-## 📈 What I Learned
+## 🔐 Security Features
 
-* Full-stack project structure
-* Responsive web design
-* JavaScript DOM manipulation
-* Backend development using Express.js
-* API routing concepts
-* Project deployment using GitHub Pages
-* Git version control workflow
-* Debugging and troubleshooting
+* Password hashing using bcrypt
+* JWT authentication
+* Protected routes using middleware
+* Environment variables
+* SQL prepared statements
+
+---
+
+## 📊 Core Functionalities
+
+### Product Management
+
+* Add new products
+* Store product data
+* Retrieve product information
+
+### Order System
+
+* Create customer orders
+* Save order details
+* Validate input fields
+
+### Contact System
+
+* Submit contact messages
+* Store customer inquiries
+
+### Authentication
+
+* Admin login verification
+* Session protection
+* Token-based security
+
+---
+
+## 📈 What This Project Demonstrates
+
+* Full Stack Web Development
+* REST API Development
+* Backend Architecture
+* Database Integration
+* Authentication System
+* Real-world Project Structure
+* Git Version Control
+* Debugging and Problem Solving
 
 ---
 
 ## 🔮 Future Improvements
 
-* User authentication system
-* Database CRUD operations
+* User registration system
+* Update / delete product APIs
 * Payment gateway integration
-* Admin dashboard functionality
+* Admin dashboard analytics
 * Order tracking system
-* JWT authentication
-* Input validation
-* Error handling middleware
+* Role-based authentication
+* Deployment to cloud server
 
 ---
 
 ## 👨‍💻 Author
 
 **Mayuresh Kasar**
-
-Full Stack Web Development Learner
+Full Stack Web Developer
 
 GitHub:
 https://github.com/mayuresh-2601
@@ -303,26 +354,3 @@ https://github.com/mayuresh-2601
 ## ⭐ Support
 
 If you found this project helpful, please give it a ⭐ on GitHub.
-
-It helps improve visibility and supports continued development.
-
----
-
-## 📌 Recruiter Note
-
-This project demonstrates:
-
-* Full-stack development fundamentals
-* Real-world project structuring
-* Frontend and backend integration
-* Responsive UI design
-* Express.js backend setup
-* Professional development workflow
-
-This project is built as a learning-focused full-stack application suitable for:
-
-* Internships
-* Junior Developer roles
-* Entry-Level Full Stack Developer positions
-
----
