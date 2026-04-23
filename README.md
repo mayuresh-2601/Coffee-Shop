@@ -40,25 +40,25 @@ The project is designed as a **portfolio-ready full-stack system** suitable for:
 
 ### 🏠 Home Page
 
-![Home Page](image/home.png)
+![Home Page](image/Home.png)
 
 ---
 
 ### ☕ Products Page
 
-![Products Page](image/products.png)
+![Products Page](image/Products.png)
 
 ---
 
 ### 🛒 Order Page
 
-![Order Page](image/order.png)
+![Order Page](image/Order.png)
 
 ---
 
 ### 🔐 Admin Login
 
-![Admin Login](image/login.png)
+![Admin Login](image/Login.png)
 
 ---
 
