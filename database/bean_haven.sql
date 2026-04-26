@@ -14,15 +14,6 @@ CREATE TABLE users (
 
 );
 
-INSERT INTO users (username, password)
-VALUES (
-'@mayuresh',
-'$2b$10$7QJrjYb9x1Z0JQ9VZy6j6u4sP5vGQ8o4z9F3g8m3q0zYz7Yp1k9uK'
-);
-
-UPDATE users
-SET password = '$2b$10$pv8ptDr9j9CFp.9.mOLw2uOK6tYq2dBRNd0sGspxouC6OvmCRpCPy'
-WHERE username = '@mayuresh';
 
 
 CREATE TABLE products (
@@ -80,9 +71,5 @@ CREATE TABLE test_connection (
 
     message VARCHAR(100)
 
-);
+);      
 
-INSERT INTO test_connection (message)
-VALUES ("MySQL Connected Successfully");
-
-SELECT * FROM test_connection;
