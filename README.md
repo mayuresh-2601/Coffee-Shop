@@ -133,51 +133,78 @@ The project is designed as a **portfolio-ready full-stack system** suitable for:
 
 ## 📂 Project Structure
 
+
 ```
 Coffee-Shop/
-
-backend/
 │
-├── config/
-│   └── db.js
+├── backend/                     # Node.js + Express Backend
+│   │
+│   ├── config/                  # Database configuration
+│   │   └── db.js                # MySQL connection setup
+│   │
+│   ├── controllers/             # Business logic (API handlers)
+│   │   ├── authController.js    # Admin authentication logic
+│   │   ├── productController.js # Product management logic
+│   │   ├── orderController.js   # Order processing logic
+│   │   └── contactController.js # Contact form handling
+│   │
+│   ├── middleware/              # Custom middleware
+│   │   └── authMiddleware.js    # JWT authentication verification
+│   │
+│   ├── routes/                  # API route definitions
+│   │   ├── authRoutes.js        # Authentication routes
+│   │   ├── productRoutes.js     # Product routes
+│   │   ├── orderRoutes.js       # Order routes
+│   │   └── contactRoutes.js     # Contact routes
+│   │
+│   ├── server.js                # Main backend server file
+│   ├── package.json             # Backend dependencies & scripts
+│   └── .env                     # Environment variables (DB, JWT, PORT)
 │
-├── controllers/
-│   ├── authController.js
-│   ├── productController.js
-│   ├── orderController.js
-│   └── contactController.js
+├── css/                         # Stylesheets for all pages
+│   ├── home.css
+│   ├── about.css
+│   ├── products.css
+│   ├── order.css
+│   ├── payment.css
+│   ├── blog.css
+│   ├── career.css
+│   ├── contact.css
+│   ├── admin.css
+│   └── admin-login.css
 │
-├── middleware/
-│   └── authMiddleware.js
+├── js/                          # Frontend JavaScript files
+│   ├── home.js
+│   ├── about.js
+│   ├── products.js
+│   ├── order.js
+│   ├── payment.js
+│   ├── blog.js
+│   ├── career.js
+│   ├── contact.js
+│   ├── admin.js
+│   └── admin-login.js
 │
-├── routes/
-│   ├── authRoutes.js
-│   ├── productRoutes.js
-│   ├── orderRoutes.js
-│   └── contactRoutes.js
+├── image/                       # Images and assets
+│   ├── logo.png
+│   ├── coffee-images/
+│   └── icons/
 │
-├── server.js
-├── package.json
-└── .env
-
-css/
-js/
-image/
-database/
-    bean_haven.sql
-
-HTML Pages:
-    index.html
-    about.html
-    products.html
-    order.html
-    payment.html
-    blog.html
-    career.html
-    contact.html
-    admin.html
-    admin-login.html
+├── database/                    # Database schema
+│   └── bean_haven.sql           # MySQL database dump
+│
+├── index.html                   # Home page
+├── about.html                   # About page
+├── products.html                # Product listing page
+├── order.html                   # Order placement page
+├── payment.html                 # Payment form page
+├── blog.html                    # Blog page
+├── career.html                  # Career / Jobs page
+├── contact.html                 # Contact page
+├── admin.html                   # Admin dashboard
+└── admin-login.html             # Admin login page
 ```
+
 
 ---
 
