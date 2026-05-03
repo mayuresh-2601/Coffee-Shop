@@ -1,5 +1,5 @@
 # ☕ Coffee Shop Full Stack Web Application
-
+                         
 A complete **Full Stack Coffee Shop Web Application** built using **HTML, CSS, JavaScript, Node.js, Express.js, and MySQL**.
 
 This project simulates a real-world café system with product management, order processing, contact handling, and admin authentication. It demonstrates full-stack development skills including frontend UI design, backend API development, and database integration.
